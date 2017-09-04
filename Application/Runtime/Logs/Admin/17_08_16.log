@@ -1,0 +1,20 @@
+[ 2017-08-16T14:39:55+08:00 ] ::1 /secms/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000742s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000947s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001191s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000111s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000309s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010521s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010684s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000761s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000796s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000936s ]
+

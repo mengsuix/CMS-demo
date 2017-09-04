@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+<script type="text/javascript" src="http://libs.useso.com/js/respond.js/1.4.2/respond.min.js"></script>
+<script type="text/javascript" src="http://cdn.bootcss.com/css3pie/2.0beta1/PIE_IE678.js"></script>
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="css/H-ui.css"/>
+<link type="text/css" rel="stylesheet" href="css/H-ui.admin.css"/>
+<link type="text/css" rel="stylesheet" href="font/font-awesome.min.css"/>
+<!--[if IE 7]>
+<link href="http://www.bootcss.com/p/font-awesome/assets/css/font-awesome-ie7.min.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<title>分类编辑</title>
+</head>
+<body>
+<div class="pd-20">
+  <form class="Huiform" action="{$modify.url}" method="post">
+    <foreach name="" item="modify" >
+		    <switch name="$modify['type']">
+			   <case value="title" >
+			       <div class="row cl">
+			          <label class="form-label col-xs-4 col-sm-2">{$modify.titleText}：</label>
+			             <div class="formControls col-xs-8 col-sm-9">
+				            <input type="text" class="input-text" value="{$modify.content}" placeholder="" id="articletitle" name="{$modify.title}">
+			             </div>
+		           </div>
+			   </case>
+			   <case value="file" >
+			   	   <div class="row cl">
+			          <label class="form-label col-xs-4 col-sm-2">{$modify.titleText}：</label>
+			             <div class="formControls col-xs-8 col-sm-9">
+				            <input type="file" class="input-text" value="{$modify.content}" placeholder="" id="articletitle" name="{$modify.title}">
+			             </div>
+		           </div>
+			   </case>
+			   <case value="select" >
+			   		<div class="row cl">
+			          <label class="form-label col-xs-4 col-sm-2">{$modify.titleText}：</label>
+			             <div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
+				               <select name="{$modify.title}" class="select">
+							       <foreach name="options" item="value">
+								       <option value="{$value}">{$value}</option>
+								   </foreach>
+				               </select>
+				         </span> </div>
+		           </div>
+			   </case>
+			   <case value="text" >
+			   		<div class="row cl">
+			           <label class="form-label col-xs-4 col-sm-2">{$modify.titleText}：</label>
+			              <div class="formControls col-xs-8 col-sm-9">
+				              <textarea name="{$modify.title}" id="editor"  type="text/plain" style="width:800px;height:300px;">{$modify.content}</textarea>				
+			              </div>
+		            </div>	
+			   </case>
+			</switch>
+		</foreach>		
+  </form>
+</div>
+<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/H-ui.js"></script> 
+<script type="text/javascript" src="js/H-ui.admin.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F080836300300be57b7f34f4b3e97d911' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>
